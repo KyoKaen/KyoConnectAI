@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+        <p>Welcome to the world of EMLYON Business School where we nurture entreLast login: Fri Dec 20 00:16:42 on ttys000
+this is zsh
+➜  ~ cd Downloads
+➜  Downloads vi emlyon-website-mock.html
+➜  Downloads ls
+2024-1120-cv
+AI Chatbot-discussionWithAdam.docx
+AI Chatbot.pdf
+AI course.docx
+AI-course-transcript.doc
+AI-course.docx
+Ambasade-japon-cert-naissance
+An-Entire-MBA-in-1-Course
+Britney Spears - ...Baby One More Time (Official Video).mp3
+CAF
+CV
+CVEC
+Caf-submitted
+Capgemini-coverletter
+CerteDeNaissance.pdf
+Certificate_l'assurance_Studapart.pdf
+Cloud Specialist (temporary assignment) _ Geneva job in Geneva.pdf
+DELFB2-081003-010808.pdf
+Deutsch
+DocumentPersonnelle
+ELP-New-Ventures (2).pdf
+EMlyon-
+EMlyon-AIAssistant
+EMlyon-AIChatbotDemo.pdf
+EMlyon-documents-
+EMlyon.png
+Electives Handbook 2024-2025.pdf
+Finance-learning
+France-long-stay-visa-validation
+GMAT
+GaranteMe-
+Glossary_Finance_Foundations_BusinessValuation.zip
+IC-Accounting-Journal-Template-Updated-8552.xlsx
+IELTS-all
+IELTs-
+IMBA Participants' Handbook 2024-2025.pdf
+IMBA Profile book_template_by_KyoKaen_2024_2025.docx
+Instructions - Identify your motivational career plan.pptx
+Instructions - Your retrospection.pptx
+Introduction for KyoConnectAI Homepage.docx
+Itzhak Perlman - Mendelssohn Violin Concerto in E - Various Conductors & OrchestrasFan Compilation.mp3
+Itzhak Perlman Tango.mp3
+Itzhak Perlman-ViolinConcerto4Season.mp3
+Julien lepetit.docx
+Kaen-employment-income-certe
+KaenKyo-AI-Chatbot-Idea.pdf
+KaenKyoCerteDeNaissance.pdf
+KaenKyoPaspport.pdf
+KaenTamara-Deutscland.docx
+KyoConnectAI
+KyoConnectAI-chatbot.docx
+KyoConnectAI.jpg
+LCL
+Latin
+LePerfekt.docx
+Lesbelleannees
+Lina-
+LinkedIn
+LyonMarathonWithKushubu
+MBA
+MBAND - Она вернётся.mp3
+New Folder With Items
+Nicolas-AI-solution-escp.docx
+NovoConnect Software Portable.app
+OpenAI-12days-Currently.docx
+Opportunities-linkedin.docx
+Photoshooting
+Pre-MBA-level-up-devoirs
+Proof-of-civil-status.pdf
+SMBC-prestia
+Students_Toolkit___Boost_your_Job_Search_with_AI.pdf
+TCS
+TCS-all
+TOEIC
+Tamara-vert.jpg
+TamaraCampingEsplanaadi
+VALIDATION_VLS-TS_9926099368_20240811_FR_EN.pdf
+VISA-LongStay-France-Ambassade
+WasedaUniversityMaster.pdf
+Westlife Greatest Hits Full Album  Westlife Best Songs.mp3
+anthropic-thinking-protocol.docx
+business-analysis-and-business-agility-in-sync-for-success.pdf
+career-startup
+chatbot.html
+culture-Cultural Awareness-done.docx
+dernieresCarriere
+emlyon-logo.png
+emlyon-prompt.docx
+iMBA CV BOOK 2024-2025.pdf
+kyoconnectai.html
+kyoconnectai2.html
+kyoconnectai3.html
+kyoconnectaiChatGPT.html
+musique
+photo
+sample3.jpg
+sample3.png
+self-photoes
+updated-integrated-definitive-18-printed.pdf
+updated-integrated-definitive.docx
+~$(C&SI)Profile_2650113_YanxiaHe_20230707 (1).pptx
+~$-2milestone.docx
+~$-public-cloud-Jul-PCS-NEWS-format-01.docx
+~$-public-cloud-Jul-pcs-news.docx
+~$AT-Data Insights Overview .docx
+~$AT-Quantitative Data.docx
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>MBA Program – Example</title>
+  <!-- Example: link to Bootstrap or your own stylesheet -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.~$Cloud Manager Customer Presentation M1 02152021.pptx
+    footer {
+~$SP retake-latest one.docx
+    footer {
+~$VMware様向け勉強会_第2回_NetApp_PCS_final_format .pptx
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <style>
+    /* BASIC STYLES */
+    body {
+      font-family: 'Open Sans', sans-serif;
+      color: #444;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* HEADER */
+    .navbar {
+      background-color: #d32f2f; /* Emulate emlyon’s red */
+    }
+    .navbar-brand, .nav-link {
+      color: #fff !important;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      position: relative;
+      background-size: cover;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+    }
+    .hero-overlay {
+      background-color: rgba(0,0,0,0.5);
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    .hero-content h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    /* MAIN CONTENT */
+    .intro-section {
+      padding: 3rem 1rem;
+    }
+    .intro-section h2 {
+      margin-bottom: 1.5rem;
+      color: #d32f2f;
+    }
+    .feature-card {
+      border: 1px solid #eee;
+      border-radius: 5px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      transition: box-shadow 0.3s ease;
+    }
+    .feature-card:hover {
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    /* CTA BUTTON */
+    .btn-cta {
+      background-color: #d32f2f;
+      color: #fff;
+      border-radius: 30px;
+      padding: 0.75rem 2rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: #f5f5f5;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="#">EMlyon MBA</a>
+    <button class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon" style="color:#fff;"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Programs</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Admissions</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>MBAs – Master of Business Administration</h1>
+      <p>Empower your career with a top-tier MBA program.</p>
+      <button class="btn btn-cta">Apply Now</button>
+    </div>
+  </section>
+
+  <!-- INTRO SECTION -->
+  <div class="container intro-section">
+    <h2>Why Choose Our MBA Program?</h2>
+    <p>
+      Our MBA program provides a transformative learning experience,
+      blending academic rigor with real-world practice. Develop the
+      leadership and entrepreneurial skills needed to thrive in today’s
+      competitive landscape.
+    </p>
+  </div>
+
+  <!-- FEATURES / HIGHLIGHTS -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="feature-card">
+          <h4>Global Curriculum</h4>
+          <p>Study with classmates from diverse backgrounds and cultures.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="feature-card">
+          <h4>Expert Faculty</h4>
+          <p>Learn from experienced professors and industry leaders.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="feature-card">
+          <h4>Professional Network</h4>
+      </div>
+    </div>
+  </div>
+
+  <!-- CALL TO ACTION -->
+
+    <p>
+      <a href="#">LinkedIn</a> |
+      <a href="#">Facebook</a> |
+      <a href="#">Twitter</a>
+    </p>
+~$Week12 for Final Presentation-solution-Yanxia.pptx
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <style>
+    /* BASIC STYLES */
+    body {
+      font-family: 'Open Sans', sans-serif;
+      color: #444;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* HEADER */
+    .navbar {
+      background-color: #d32f2f; /* Emulate emlyon’s red */
+    }
+    .navbar-brand, .nav-link {
+      color: #fff !important;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      position: relative;
+      background-size: cover;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+    }
+    .hero-overlay {
+      background-color: rgba(0,0,0,0.5);
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    .hero-content h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    /* MAIN CONTENT */
+    .intro-section {
+      padding: 3rem 1rem;
+    }
+    .intro-section h2 {
+      margin-bottom: 1.5rem;
+      color: #d32f2f;
+    }
+    .feature-card {
+      border: 1px solid #eee;
+      border-radius: 5px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      transition: box-shadow 0.3s ease;
+    }
+    .feature-card:hover {
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    /* CTA BUTTON */
+    .btn-cta {
+      background-color: #d32f2f;
+      color: #fff;
+      border-radius: 30px;
+      padding: 0.75rem 2rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: #f5f5f5;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="#">EMlyon MBA</a>
+    <button class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon" style="color:#fff;"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Programs</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Admissions</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>MBAs – Master of Business Administration</h1>
+      <p>Empower your career with a top-tier MBA program.</p>
+      <button class="btn btn-cta">Apply Now</button>
+    </div>
+  </section>
+
+  <!-- INTRO SECTION -->
+  <div class="container intro-section">
+    <h2>Why Choose Our MBA Program?</h2>
+    <p>
+      Our MBA program provides a transformative learning experience,
+      blending academic rigor with real-world practice. Develop the
+      leadership and entrepreneurial skills needed to thrive in today’s
+      competitive landscape.
+    </p>
+  </div>
+
+  <!-- FEATURES / HIGHLIGHTS -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="feature-card">
+          <h4>Global Curriculum</h4>
+          <p>Study with classmates from diverse backgrounds and cultures.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="feature-card">
+          <h4>Expert Faculty</h4>
+          <p>Learn from experienced professors and industry leaders.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="feature-card">
+          <h4>Professional Network</h4>
+      </div>
+    </div>
+  </div>
+
+    <p>&copy; 2024 Your Business School. All rights reserved.</p>
+    <p>
+      <a href="#">LinkedIn</a> |
+      <a href="#">Facebook</a> |
+~$ckets-Vienne.docx
+~$emy-IELTs.docx
+~$nagerial accounting-exam.docx
+~$nancial Accounting Part 1-8.The importance of routine bookkeeping.docx
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KyoConnectAI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 50px;
+            background-color: #000;
+            color: #fff;
+        }
+        header img {
+            height: 40px;
+        }
+        header .logo-text {
+            margin-left: 10px;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 80vh;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin-bottom: 30px;
+        }
+        .hero a {
+            background-color: #000;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .section {
+            display: flex;
+            padding: 50px;
+            align-items: center;
+            justify-content: center;
+        }
+        .section .text {
+            flex: 1;
+            padding: 20px;
+        }
+        .section .image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .section img {
+            max-width: 100%;
+            height: auto;
+            box-shadow: none;
+            color: #fff;
+            text-align: center;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+        <div style="display: flex; align-items: center;">
+            <img src="KyoConnectAI.jpg" alt="KyoConnectAI Logo">
+            <span class="logo-text">KyoConnectAI</span>
+        </div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#mission">Mission</a>
+            <a href="#uvp">Our Solution</a>
+        </nav>
+        <h1>Custom ChatGPT for Your Business</h1>
+        <a href="#get-started">Get Started</a>
+    </div>
+
+    <div id="mission" class="section">
+        <div class="text">
+            <h2>Our Mission</h2>
+        </div>
+        <div class="image">
+            <img src="emlyon-demo.jpg" alt="Mission Image">
+        </div>
+    </div>
+
+    <div id="uvp" class="section">
+        <div class="text">
+            <h2>Our Unique Value Proposition</h2>
+            <p>"One AI Chatbot, Seamless Multi-Platform Integration." Effortlessly connect with customers across WhatsApp, Messenger, Instagram, and your website while gaining valuable insights.</p>
+        </div>
+        <div class="image">
+            <img src="analytics.jpg" alt="UVP Image">
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 KyoConnectAI. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
