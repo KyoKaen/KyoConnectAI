@@ -390,6 +390,7 @@
             </div>
             <div class="powered-by">
                 Powered by <a href="https://kyoconnectai.com/" target="_blank">KyoConnectAI</a>
+                | AI can make mistakes
             </div>
         </div>
     `;
