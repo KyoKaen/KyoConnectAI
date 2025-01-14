@@ -151,13 +151,13 @@
         //pre-defined questions
         initializeChat: function () {
     // Call initTextarea to set up the textarea
-    this.initTextarea();
+    // this.initTextarea();
 
     // Add predefined questions to the chat
     const predefinedQuestions = [
         'What is KyoConnectAI?',
-        'How can I get started?',
-        'Do you have a demo?',
+        // 'How can I get started?',
+        // 'Do you have a demo?',
         'What services do you offer?'
     ];
     this.addQuickReplies(predefinedQuestions);
@@ -466,7 +466,7 @@ sendMessageFromQuickReply: function (message) {
     document.body.appendChild(widgetContainer);
 
     // Initialize textarea auto-resize
-    // ChatWidget.initTextarea(); already called
+    ChatWidget.initTextarea(); 
     ChatWidget.initializeChat();
 
     // Add mobile touch handlers
