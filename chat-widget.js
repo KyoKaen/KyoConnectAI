@@ -363,6 +363,29 @@
         #chat-widget-container .slide-down {
             animation: slideDown 0.3s ease-out;
         }
+        
+#chat-widget-container .quick-replies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#chat-widget-container .quick-reply-button {
+    background: #e0e0e0;
+    color: #000;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#chat-widget-container .quick-reply-button:hover {
+    background: #d6d6d6;
+}
+
+        
     `;
 
     const styleSheet = document.createElement("style");
@@ -389,7 +412,7 @@
                 <textarea id="userInput" placeholder="Type your message..." onkeydown="ChatWidget.handleKeyPress(event)"></textarea>
             </div>
             <div class="powered-by">
-                Powered by <a href="https://kyoconnectai.com/" target="_blank">KyoConnectAI</a>
+                **Powered by <a href="https://kyoconnectai.com/" target="_blank">KyoConnectAI</a>
                 | AI can make mistakes
             </div>
         </div>
