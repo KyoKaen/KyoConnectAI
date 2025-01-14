@@ -454,7 +454,7 @@ sendMessageFromQuickReply: function (message) {
                 <textarea id="userInput" placeholder="Type your message..." onkeydown="ChatWidget.handleKeyPress(event)"></textarea>
             </div>
             <div class="powered-by">
-                **Powered by <a href="https://kyoconnectai.com/" target="_blank">KyoConnectAI</a>
+                Powered by <a href="https://kyoconnectai.com/" target="_blank">KyoConnectAI</a>
                 | AI can make mistakes
             </div>
         </div>
