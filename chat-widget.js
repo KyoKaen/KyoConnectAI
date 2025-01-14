@@ -467,7 +467,7 @@ sendMessageFromQuickReply: function (message) {
 
     // Initialize textarea auto-resize
     ChatWidget.initTextarea(); 
-    ChatWidget.initializeChat();
+    // ChatWidget.initializeChat();
 
     // Add mobile touch handlers
     document.querySelector('#chat-widget-container .chat-container').addEventListener('touchmove', function (e) {
