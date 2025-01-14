@@ -146,7 +146,49 @@
                 this.style.height = '45px';
                 this.style.height = (this.scrollHeight) + 'px';
             });
-        }
+        },
+        
+        //pre-defined questions
+        initializeChat: function () {
+    // Call initTextarea to set up the textarea
+    this.initTextarea();
+
+    // Add predefined questions to the chat
+    const predefinedQuestions = [
+        'What is KyoConnectAI?',
+        'How can I get started?',
+        'Do you have a demo?',
+        'What services do you offer?'
+    ];
+    this.addQuickReplies(predefinedQuestions);
+},
+
+addQuickReplies: function (questions) {
+    const chatBody = document.querySelector('#chat-widget-container #chatBody');
+    const quickRepliesContainer = document.createElement('div');
+    quickRepliesContainer.className = 'quick-replies';
+
+    questions.forEach((question) => {
+        const button = document.createElement('button');
+        button.className = 'quick-reply-button';
+        button.textContent = question;
+        button.onclick = () => {
+            this.addMessage('user', question);
+            this.sendMessageFromQuickReply(question);
+        };
+        quickRepliesContainer.appendChild(button);
+    });
+
+    chatBody.appendChild(quickRepliesContainer);
+    chatBody.scrollTop = chatBody.scrollHeight;
+},
+
+sendMessageFromQuickReply: function (message) {
+    const input = document.querySelector('#chat-widget-container #userInput');
+    input.value = message;
+    this.sendMessage();
+}
+//pre-defined
     };
 
     const styles = `
@@ -424,7 +466,8 @@
     document.body.appendChild(widgetContainer);
 
     // Initialize textarea auto-resize
-    ChatWidget.initTextarea();
+    // ChatWidget.initTextarea(); already called
+    ChatWidget.initializeChat();
 
     // Add mobile touch handlers
     document.querySelector('#chat-widget-container .chat-container').addEventListener('touchmove', function (e) {
