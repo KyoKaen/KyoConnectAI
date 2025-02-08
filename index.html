@@ -71,6 +71,40 @@
         .hero button:hover {
             background-color: #444;
         } 
+        .language-selector {
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+.language-selector:hover .dropdown {
+    display: block;
+}
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 35px;
+    right: 0;
+    background-color: #000;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+.dropdown a {
+    display: block;
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+}
+.dropdown a:hover {
+    background-color: #444;
+}
+
         .section {
             display: flex;
             flex-wrap: wrap;
@@ -158,18 +192,42 @@
         }
     </style>
     <script>
-        function togglePopup() {
-            const popup = document.querySelector('.popup');
-            const overlay = document.querySelector('.overlay');
-            popup.style.display = popup.style.display === 'block' ? 'none' : 'block';
-            overlay.style.display = overlay.style.display === 'block' ? 'none' : 'block';
-        }
+        // function togglePopup() {
+        //     const popup = document.querySelector('.popup');
+        //     const overlay = document.querySelector('.overlay');
+        //     popup.style.display = popup.style.display === 'block' ? 'none' : 'block';
+        //     overlay.style.display = overlay.style.display === 'block' ? 'none' : 'block';
+        // }
 
-        function submitForm(event) {
-            event.preventDefault();
-            alert('Your request has been sent!');
-            togglePopup();
-        }
+        // function submitForm(event) {
+        //     event.preventDefault();
+        //     alert('Your request has been sent!');
+        //     togglePopup();
+        // }
+        const translations = {
+    en: {
+        mission: "Our Mission",
+        useCases: "Use Cases",
+        contact: "Contact Us",
+        heroHeader: "Empower your business with Tailored AI Solutions",
+        heroSubtext: "Leverage AI chatbots to enhance communication, streamline operations, and unlock actionable insights—all without technical complexity.",
+    },
+    fr: {
+        mission: "Notre Mission",
+        useCases: "Cas d'utilisation",
+        contact: "Contactez-nous",
+        heroHeader: "Renforcez votre entreprise avec des solutions AI sur mesure",
+        heroSubtext: "Exploitez les chatbots AI pour améliorer la communication, rationaliser les opérations et débloquer des informations exploitables—sans complexité technique.",
+    }
+};
+        function setLanguage(lang) {
+    document.getElementById("mission-text").innerText = translations[lang].mission;
+    document.getElementById("use-cases-text").innerText = translations[lang].useCases;
+    document.getElementById("contact-text").innerText = translations[lang].contact;
+    document.getElementById("hero-header").innerText = translations[lang].heroHeader;
+    document.getElementById("hero-subtext").innerText = translations[lang].heroSubtext;
+}
+
     </script>
 </head>
 <body>
@@ -179,17 +237,28 @@
             <span class="logo-text">KyoConnectAI</span>
         </div>
         <nav>
-            <a href="#mission">Our Missiont</a>
-            <a href="#use-cases0">Use Cases</a>
-            <a href="#contact">Contact Us</a>
+            <a href="#mission" id="mission-text">Our Mission</a>
+            <a href="#use-cases0" id="use-cases-text">Use Cases</a>
+            <a href="#contact" id="contact-text">Contact Us</a>
         </nav>
+        <div class="language-selector">
+    Language
+    <div class="dropdown">
+        <a href="#" onclick="setLanguage('en')">English</a>
+        <a href="#" onclick="setLanguage('fr')">Français</a>
+    </div>
+</div>
+
     </header>
 
     <div class="hero">
-        <h1>Empower your business with Tailored AI Solutions</h1>
-        <p>Leverage AI chatbots to enhance communication, streamline operations, and unlock actionable insights—all without technical complexity.</p>
+        <h1 id="hero-header">Empower your business with Tailored AI Solutions</h1>
+        <p id="hero-subtext">Leverage AI chatbots to enhance communication, streamline operations, and unlock actionable insights—all without technical complexity.</p>
+
+<!--         <h1>Empower your business with Tailored AI Solutions</h1> -->
+<!--         <p>Leverage AI chatbots to enhance communication, streamline operations, and unlock actionable insights—all without technical complexity.</p> -->
 <!--         <button onclick="togglePopup()">Need Help for AI solution?</button> -->
-        <h1>Build your own AI Agent & Unlock the power of AI-driven Agents</h1>
+        <h1 id="hero-subtext">Build your own AI Agent & Unlock the power of AI-driven Agents</h1>
 
     </div>
 
