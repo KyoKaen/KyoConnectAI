@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KyoConnectAI</title>
+    <!-- set homepage icon/favicon -->
+    <link rel="icon" href="kyoconnectai_logo.jpg" type="image/jpeg"/>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 50px;
+            background-color: #000;
+            color: #fff;
+        }
+        header img {
+            height: 40px;
+        }
+        header .logo-text {
+            margin-left: 10px;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 80vh;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin-bottom: 30px;
+        }
+        .hero button {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .hero button {
+            background-color: #000;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .hero button:hover {
+            background-color: #444;
+        } 
+        .section {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 50px;
+            align-items: center;
+            justify-content: center;
+        }
+        .section .text {
+            flex: 1;
+            padding: 20px;
+            max-width: 600px;
+        }
+        .section .image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 600px;
+        }
+        .section iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+        }
+        .section img {
+            max-width: 100%;
+            height: auto;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            width: 90%;
+            max-width: 400px;
+        }
+        .popup h2 {
+            margin: 0 0 10px;
+            text-align: center;
+        }
+        .popup input,
+        .popup textarea,
+        .popup button {
+            margin: 10px 0;
+            padding: 10px;
+            width: calc(100% - 20px);
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .popup textarea {
+            resize: none;
+        }
+        .popup button {
+            background-color: #000;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .popup button:hover {
+            background-color: #444;
+        }
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+        footer {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 10px 20px;
+        }
+    </style>
+    <script>
+        function togglePopup() {
+            const popup = document.querySelector('.popup');
+            const overlay = document.querySelector('.overlay');
+            popup.style.display = popup.style.display === 'block' ? 'none' : 'block';
+            overlay.style.display = overlay.style.display === 'block' ? 'none' : 'block';
+        }
+
+        function submitForm(event) {
+            event.preventDefault();
+            alert('Your request has been sent!');
+            togglePopup();
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div style="display: flex; align-items: center;">
+            <img src="kyoconnectai_logo.jpg" alt="KyoConnectAI Logo">
+            <span class="logo-text">KyoConnectAI</span>
+        </div>
+        <nav>
+            <a href="#mission">Our Mission</a>
+            <a href="#use-cases0">Use Cases</a>
+            <a href="#contact">Contact Us</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>Empower your business with Tailored AI Solutions</h1>
+        <p>Leverage AI chatbots to enhance communication, streamline operations, and unlock actionable insights—all without technical complexity.</p>
+<!--         <button onclick="togglePopup()">Need Help for AI solution?</button> -->
+        <h1>Build your own AI Agent & Unlock the power of AI-driven Agents</h1>
+
+    </div>
+
+    <div id="mission" class="section">
+        <div class="text">
+            <h2>Our Mission</h2>
+            <p>At KyoConnectAI, our mission is to connect your business with the power of AI, building your own AI Agent, helping businesses unlock opportunities, streamline communication, and leverage tailored AI solutions step by step to meet their unique needs.</p>
+        </div>
+        <div class="image">
+            <img src="mission.jpg" alt="Our Mission">
+        </div>
+    </div>
+
+    <div id="supported-models" class="section">
+    <div class="text">
+        <h2>Supported AI Models & Features</h2>
+        <p>At KyoConnectAI, we offer seamless integration with advanced AI models to meet diverse business needs.</p>
+    </div>
+    <div class="image">
+        <img src="only-4-icons.jpg" alt="Supported AI Models" style="max-width: 100%; height: auto;">
+    </div>
+    <div class="text">
+        <h3>Capabilities:</h3>
+        <ul>
+            <li><strong>Works Across Channels:</strong> Easily integrate with platforms like Slack, WhatsApp, Messenger, and web widgets.</li>
+            <li><strong>Secure by Default:</strong> Safeguard sensitive data with robust security features.</li>
+            <li><strong>Enterprise Quality Guardrails:</strong> Maintain professionalism and ensure trust in every interaction.</li>
+        </ul>
+    </div>
+    <div class="image">
+        <img src="chatgpt-deepseek-icon.jpg" alt="Functionality Overview" style="max-width: 100%; height: auto;">
+    </div>
+   </div>
+    <div id="use-cases0" class="section">
+        <div class="text">
+            <h2>Use Cases</h2>
+            <p><strong>Case 0: Sustainable Hostel AI Agent for Q&A</strong></p>
+            <p>Jo&Joe demo: <a href="https://kyokaen.github.io/kyoconnectai-mock-usecase/joandjoe-german.html" 
+                                             target="_blank">Jo&Joe Hostel</a></p>
+        </div>
+        <div class="image">
+            <iframe src="https://kyokaen.github.io/kyoconnectai-mock-usecase/joandjoe-german.html"></iframe>
+        </div>
+    </div>
+
+    <div id="use-cases1" class="section">
+        <div class="text">
+            <h2>Use Cases</h2>
+            <p><strong>Case 1: EMLyon Business School MBA AI chatbot Agent</strong></p>
+            <p>Visit the EMLyon Website: <a href="https://kyokaen.github.io/kyoconnectai-mock-usecase/emlyon-mbas-demo.html" target="_blank">EMLyon MBA program</a></p>
+        </div>
+        <div class="image">
+            <iframe src="https://kyokaen.github.io/kyoconnectai-mock-usecase/emlyon-mbas-demo.html"></iframe>
+        </div>
+    </div>
+
+    <div id="use-cases2" class="section">
+        <div class="text">
+            <h2>Use Cases</h2>
+            <p><strong>Case 2: Camping Esplanaadi</strong></p>
+            <p>Tamara, the owner of a small camping business called Camping Esplanaadi, used to spend hours responding to visitor inquiries through messages and phone calls, interrupting her daily work. With our AI chatbot solution, Tamara no longer needs to manage these repetitive tasks manually. The chatbot now handles all customer queries efficiently, allowing Tamara to focus on running her business. As she commented, "The chatbot works perfectly, and I finally feel relieved."</p>
+            <p>Visit the Camping Website: <a href="https://campingesplanaadi.blogspot.com/" target="_blank">Camping Esplanaadi</a></p>
+        </div>
+        <div class="image">
+            <iframe src="https://campingesplanaadi.blogspot.com/"></iframe>
+        </div>
+    </div>
+
+    <div id="use-cases2" class="section">
+        <div class="text">
+            <h2>Use Cases</h2>
+            <p><strong>Case 3: Antineo aims to accompany customers in the preclinical development of novel anticancer agents.</strong></p>
+<!--             <p>Antineo AI Chatbot Assistant</p> -->
+            <p>Visit the Antineo Website: <a href="https://kyokaen.github.io/kyoconnectai-mock-usecase/antineo.html" target="_blank">Antineo</a></p>
+        </div>
+        <div class="image">
+            <iframe src="https://kyokaen.github.io/kyoconnectai-mock-usecase/antineo.html"></iframe>
+        </div>
+    </div>
+
+    <div class="overlay" onclick="togglePopup()"></div>
+    <div class="popup">
+        <form onsubmit="submitForm(event)">
+            <h2>How Can We Help You?</h2>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Describe your case or inquiry" rows="4" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+    <footer id="contact">
+        <p>&copy; 2025 KyoConnectAI. All Rights Reserved.</p>
+        <p>Contact us at <a href="mailto:kyo.kaen@kyoconnectai.com" style="color: #fff;">kyo.kaen@kyoconnectai.com</a></p>
+    </footer>
+
+        <script>
+      window.CHAT_WIDGET_CONFIG = {
+        primaryColor: '#000000', // Changed to black
+        welcomeMessage: 'Hi, welcome to KyoConnectAI, what can I help you?',
+        botId: '67850e80420a457295514554',
+        botName: 'KyoConnectAI',
+        logo: 'https://kyoconnectai.com/kyoconnectai_logo.jpg',
+        textColor: '#ffffff'
+      };
+    </script>
+    <script src="https://kyoconnectai.com/chat-widget.js" defer></script>
+
+</body>
+</html>
