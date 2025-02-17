@@ -100,7 +100,7 @@
             height: auto;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
         }
-        .popup {
+/*         .popup {
             display: none;
             position: fixed;
             top: 50%;
@@ -113,8 +113,8 @@
             z-index: 1000;
             width: 90%;
             max-width: 400px;
-        }
-        .popup h2 {
+        } */
+/*         .popup h2 {
             margin: 0 0 10px;
             text-align: center;
         }
@@ -139,8 +139,8 @@
         }
         .popup button:hover {
             background-color: #444;
-        }
-        .overlay {
+        } */
+/*         .overlay {
             display: none;
             position: fixed;
             top: 0;
@@ -149,7 +149,7 @@
             height: 100%;
             background: rgba(0, 0, 0, 0.5);
             z-index: 999;
-        }
+        } */
         footer {
             background-color: #000;
             color: #fff;
@@ -157,7 +157,7 @@
             padding: 10px 20px;
         }
     </style>
-    <script>
+<!--     <script>
         function togglePopup() {
             const popup = document.querySelector('.popup');
             const overlay = document.querySelector('.overlay');
@@ -170,7 +170,7 @@
             alert('Your request has been sent!');
             togglePopup();
         }
-    </script>
+    </script> -->
 </head>
 <body>
     <header>
@@ -270,7 +270,7 @@
         </div>
     </div>
 
-    <div class="overlay" onclick="togglePopup()"></div>
+<!--     <div class="overlay" onclick="togglePopup()"></div>
     <div class="popup">
         <form onsubmit="submitForm(event)">
             <h2>How Can We Help You?</h2>
@@ -279,14 +279,14 @@
             <textarea placeholder="Describe your case or inquiry" rows="4" required></textarea>
             <button type="submit">Send</button>
         </form>
-    </div>
+    </div> -->
 
     <footer id="contact">
         <p>&copy; 2025 KyoConnectAI. All Rights Reserved.</p>
-        <p>Contact us at <a href="mailto:kyo.kaen@kyoconnectai.com" style="color: #fff;">kyo.kaen@kyoconnectai.com</a></p>
+<!--         <p>Contact us at <a href="mailto:kyo.kaen@kyoconnectai.com" style="color: #fff;">kyo.kaen@kyoconnectai.com</a></p> -->
     </footer>
 
-        <script>
+    <script>
       window.CHAT_WIDGET_CONFIG = {
         primaryColor: '#000000', // Changed to black
         welcomeMessage: 'Hi, welcome to KyoConnectAI, what can I help you?',
