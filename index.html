@@ -150,7 +150,8 @@
         #pricing .text {
              flex: none; /* Prevent flex items from growing/shrinking based on flex: 1 */
              width: 100%; /* Allow text container to take full width up to max-width */
-             max-width: 1000px; /* Match the max-width of the image container */
+             /* Increased max-width for wider content */
+             max-width: 1200px; /* Adjusted as requested */
              box-sizing: border-box; /* Include padding in the width */
              padding: 20px; /* Keep the padding */
              margin-bottom: 0; /* Adjust margin to control space below text */
@@ -190,7 +191,8 @@
         /* Styles for the pricing images container */
         .pricing-images {
             width: 100%; /* Take full width up to max-width of parent */
-            max-width: 1000px; /* Match the max-width of the section content */
+            /* Increased max-width for wider content */
+            max-width: 1200px; /* Adjusted as requested */
             display: flex; /* Use flex to center the image if it's smaller than container */
             justify-content: center;
             align-items: center;
@@ -208,15 +210,68 @@
             display: none;
         }
 
-        /* New styles to enlarge text in the pricing section */
+        /* Styles to enlarge text in the pricing section */
         #pricing .text h2 {
-            font-size: 3rem; /* Adjust as needed */
-            margin-bottom: 10px; /* Adjust spacing below heading */
+            font-size: 2.5rem; /* Adjust as needed */
+            margin-bottom: 10px; /* Adjusted spacing below heading */
         }
 
         #pricing .text p {
-            font-size: 2rem; /* Adjust as needed */
-            margin-top: 0; /* Adjust spacing above paragraph */
+            font-size: 1.4rem; /* Adjust as needed */
+            margin-top: 0; /* Adjusted spacing above paragraph */
+        }
+
+        /* Custom styles for the Use Cases section to stack content vertically */
+        #use-cases.section {
+            flex-direction: column; /* Stack children (heading and use case items) vertically */
+            align-items: center; /* Center items horizontally */
+            text-align: center; /* Center the main heading text */
+        }
+
+        /* Style for the main Use Cases heading */
+        #use-cases h2 {
+            margin-bottom: 40px; /* Add space below the main heading */
+        }
+
+        /* Style for each individual use case item */
+        .use-case-item {
+            display: flex;
+            flex-direction: column; /* Stack text and image within each item */
+            align-items: center; /* Center text and image horizontally within the item */
+            width: 100%; /* Take full width of parent (up to max-width) */
+            max-width: 1000px; /* Set a max-width for each use case item - you can adjust this */
+            margin-bottom: 40px; /* Add space between individual use cases */
+            padding: 20px; /* Add padding within each use case item */
+            box-sizing: border-box;
+            border: 1px solid #eee; /* Optional: Add a subtle border for separation */
+            border-radius: 8px; /* Optional: Add rounded corners */
+            background-color: #fff; /* Optional: Add a background color */
+            text-align: left; /* Align text to the left within the use case item */
+        }
+
+        /* Override default .section .text and .section .image styles for .use-case-item children */
+        .use-case-item .text {
+            flex: none; /* Prevent flex stretching */
+            width: 100%; /* Text takes full width of the item container */
+            max-width: none; /* Remove max-width constraint from general .section .text */
+            padding: 0 0 20px 0; /* Adjust padding as needed (bottom padding for space before image) */
+        }
+
+        .use-case-item .image {
+            flex: none; /* Prevent flex stretching */
+            width: 100%; /* Image container takes full width of the item container */
+            max-width: none; /* Remove max-width constraint from general .section .image */
+            padding: 0; /* Remove default padding */
+            display: flex; /* Keep flex for centering iframe */
+            justify-content: center;
+            align-items: center;
+        }
+
+        .use-case-item iframe {
+            width: 100%; /* Ensure iframe takes full width of its container */
+            height: 400px; /* Keep existing height, adjust if needed */
+            border: none;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Keep shadow */
         }
 
 
@@ -234,8 +289,7 @@
         </div>
         <nav>
             <a href="#mission">Our Mission</a>
-            <a href="#use-cases0">Use Cases</a>
-            <a href="#pricing">Pricing</a>
+            <a href="#use-cases">Use Cases</a> <a href="#pricing">Pricing</a>
             <a href="#contact">Contact Us</a>
         </nav>
     </header>
@@ -280,21 +334,58 @@
         </div>
     </div>
 
-    <div id="use-cases0" class="section">
+    <div id="use-cases" class="section">
         <div class="text">
             <h2>Use Cases</h2>
-            <p><strong>Case 0: Sustainable Hostel AI Agent for Q&A</strong></p>
-            <p>Jo&Joe demo: <a href="https://kyokaen.github.io/kyoconnectai-mock-usecase/joandjoe-german.html" target="_blank">Jo&Joe Hostel</a></p>
         </div>
-        <div class="image">
-            <iframe src="https://kyokaen.github.io/kyoconnectai-mock-usecase/joandjoe-german.html"></iframe>
+
+        <div class="use-case-item">
+            <div class="text">
+                <p><strong>Case 0: Sustainable Hostel AI Agent for Q&A</strong></p>
+                <p>Jo&Joe demo: <a href="https://kyokaen.github.io/kyoconnectai-mock-usecase/joandjoe-german.html" target="_blank">Jo&Joe Hostel</a></p>
+            </div>
+            <div class="image">
+                <iframe src="https://kyokaen.github.io/kyoconnectai-mock-usecase/joandjoe-german.html"></iframe>
+            </div>
+        </div>
+
+        <div class="use-case-item">
+            <div class="text">
+                <p><strong>Case 1: EMLyon Business School MBA AI chatbot Agent</strong></p>
+                <p>Visit the EMLyon Website: <a href="https://kyokaen.github.io/kyoconnectai-mock-usecase/emlyon-mbas-demo.html" target="_blank">EMLyon MBA program</a></p>
+            </div>
+            <div class="image">
+                <iframe src="https://kyokaen.github.io/kyoconnectai-mock-usecase/emlyon-mbas-demo.html"></iframe>
+            </div>
+        </div>
+
+        <div class="use-case-item">
+            <div class="text">
+                <p><strong>Case 2: Camping Esplanaadi</strong></p>
+                <p>Tamara, the owner of a small camping business called Camping Esplanaadi, used to spend hours responding to visitor inquiries through messages and phone calls, interrupting her daily work. With our AI chatbot solution, Tamara no longer needs to manage these repetitive tasks manually. The chatbot now handles all customer queries efficiently, allowing Tamara to focus on running her business. As she commented, "The chatbot works perfectly, and I finally feel relieved."</p>
+                <p>Visit the Camping Website: <a href="https://campingesplanaadi.blogspot.com/" target="_blank">Camping Esplanaadi</a></p>
+            </div>
+            <div class="image">
+                <iframe src="https://campingesplanaadi.blogspot.com/"></iframe>
+            </div>
+        </div>
+
+        <div class="use-case-item">
+             <div class="text">
+                <p><strong>Case 3: Antineo aims to accompany customers in the preclinical development of novel anticancer agents.</strong></p>
+                <p>Visit the Antineo Website: <a href="https://kyokaen.github.io/kyoconnectai-mock-usecase/antineo.html" target="_blank">Antineo</a></p>
+            </div>
+            <div class="image">
+                <iframe src="https://kyokaen.github.io/kyoconnectai-mock-usecase/antineo.html"></iframe>
+            </div>
         </div>
     </div>
 
-     <div id="pricing" class="section">
+    <div id="pricing" class="section">
          <div class="text">
             <h2>Predictable pricing scalable plans</h2>
-            <p>Designed for every stage of your journey.</p> </div>
+            <p>Designed for every stage of your journey.</p>
+         </div>
          <div class="pricing-toggle-container">
              <div class="pricing-toggle">
                  <button class="toggle-button active" data-target="monthly">Monthly</button>
@@ -305,40 +396,6 @@
              <img src="pricing-monthly.jpg" alt="Monthly Pricing Plans" id="monthly-pricing-image" class="pricing-image">
              <img src="pricing-yearly.jpg" alt="Yearly Pricing Plans" id="yearly-pricing-image" class="pricing-image hidden">
          </div>
-    </div>
-
-    <div id="use-cases1" class="section">
-        <div class="text">
-            <h2>Use Cases</h2>
-            <p><strong>Case 1: EMLyon Business School MBA AI chatbot Agent</strong></p>
-            <p>Visit the EMLyon Website: <a href="https://kyokaen.github.io/kyoconnectai-mock-usecase/emlyon-mbas-demo.html" target="_blank">EMLyon MBA program</a></p>
-        </div>
-        <div class="image">
-            <iframe src="https://kyokaen.github.io/kyoconnectai-mock-usecase/emlyon-mbas-demo.html"></iframe>
-        </div>
-    </div>
-
-    <div id="use-cases2" class="section">
-        <div class="text">
-            <h2>Use Cases</h2>
-            <p><strong>Case 2: Camping Esplanaadi</strong></p>
-            <p>Tamara, the owner of a small camping business called Camping Esplanaadi, used to spend hours responding to visitor inquiries through messages and phone calls, interrupting her daily work. With our AI chatbot solution, Tamara no longer needs to manage these repetitive tasks manually. The chatbot now handles all customer queries efficiently, allowing Tamara to focus on running her business. As she commented, "The chatbot works perfectly, and I finally feel relieved."</p>
-            <p>Visit the Camping Website: <a href="https://campingesplanaadi.blogspot.com/" target="_blank">Camping Esplanaadi</a></p>
-        </div>
-        <div class="image">
-            <iframe src="https://campingesplanaadi.blogspot.com/"></iframe>
-        </div>
-    </div>
-
-    <div id="use-cases2" class="section">
-        <div class="text">
-            <h2>Use Cases</h2>
-            <p><strong>Case 3: Antineo aims to accompany customers in the preclinical development of novel anticancer agents.</strong></p>
-            <p>Visit the Antineo Website: <a href="https://kyokaen.github.io/kyoconnectai-mock-usecase/antineo.html" target="_blank">Antineo</a></p>
-        </div>
-        <div class="image">
-            <iframe src="https://kyokaen.github.io/kyoconnectai-mock-usecase/antineo.html"></iframe>
-        </div>
     </div>
 
     <div id="contact" class="section">
