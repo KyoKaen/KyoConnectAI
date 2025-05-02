@@ -144,25 +144,83 @@
         #pricing.section {
             flex-direction: column; /* Stack children vertically */
             align-items: center; /* Center items horizontally in the column */
+            text-align: center; /* Center text within the pricing section */
         }
 
-        #pricing .text,
-        #pricing .image {
-            flex: none; /* Prevent flex items from growing/shrinking based on flex: 1 */
-            width: 100%; /* Allow text and image containers to take full width up to max-width */
-            max-width: 1200px; /* Adjust max-width as needed for centering the image */
-            box-sizing: border-box; /* Include padding in the width */
-            padding: 20px; /* Keep the padding */
-            text-align: center; /* Added to ensure text is centered within its container */
+        #pricing .text {
+             flex: none; /* Prevent flex items from growing/shrinking based on flex: 1 */
+             width: 100%; /* Allow text container to take full width up to max-width */
+             max-width: 1000px; /* Match the max-width of the image container */
+             box-sizing: border-box; /* Include padding in the width */
+             padding: 20px; /* Keep the padding */
+             margin-bottom: 0; /* Adjust margin to control space below text */
         }
 
-         #pricing .image img {
-             max-width: 100%; /* Ensure the image itself is responsive */
-             height: auto;
-             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Keep existing shadow */
-         }
+        /* Styles for the pricing toggle container */
+        .pricing-toggle-container {
+            margin-top: 20px; /* Space below the text */
+            margin-bottom: 20px; /* Space above the images */
+            display: flex;
+            justify-content: center; /* Center the toggle switch */
+        }
 
-         /* Optional: Add smooth scrolling */
+        /* Styles for the pricing toggle switch */
+        .pricing-toggle {
+            border: 1px solid #ccc; /* Add a border similar to the screenshot */
+            border-radius: 20px; /* Rounded corners */
+            overflow: hidden; /* Ensures rounded corners are applied to children */
+            display: flex; /* Arrange buttons side-by-side */
+        }
+
+        /* Styles for the toggle buttons */
+        .toggle-button {
+            padding: 10px 20px;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+        }
+
+        .toggle-button.active {
+            background-color: #000; /* Black background for active button */
+            color: #fff; /* White text for active button */
+        }
+
+        /* Styles for the pricing images container */
+        .pricing-images {
+            width: 100%; /* Take full width up to max-width of parent */
+            max-width: 1000px; /* Match the max-width of the section content */
+            display: flex; /* Use flex to center the image if it's smaller than container */
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Styles for the pricing images */
+        .pricing-image {
+            max-width: 100%; /* Ensure image fits within its container */
+            height: auto;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Keep the shadow */
+        }
+
+        /* Class to hide the inactive image */
+        .hidden {
+            display: none;
+        }
+
+        /* New styles to enlarge text in the pricing section */
+        #pricing .text h2 {
+            font-size: 2.5rem; /* Adjust as needed */
+            margin-bottom: 10px; /* Adjust spacing below heading */
+        }
+
+        #pricing .text p {
+            font-size: 1.4rem; /* Adjust as needed */
+            margin-top: 0; /* Adjust spacing above paragraph */
+        }
+
+
+        /* Optional: Add smooth scrolling */
         html {
             scroll-behavior: smooth;
         }
@@ -234,12 +292,19 @@
     </div>
 
      <div id="pricing" class="section">
-        <div class="text">
+         <div class="text">
             <h2>Predictable pricing scalable plans</h2>
-        </div>
-        <div class="image">
-            <img src="pricing-yearly.jpg" alt="Pricing Plans">
-        </div>
+            <p>Designed for every stage of your journey.</p> </div>
+         <div class="pricing-toggle-container">
+             <div class="pricing-toggle">
+                 <button class="toggle-button active" data-target="monthly">Monthly</button>
+                 <button class="toggle-button" data-target="yearly">Yearly</button>
+             </div>
+         </div>
+         <div class="pricing-images">
+             <img src="QQ_1746186451110.jpg" alt="Monthly Pricing Plans" id="monthly-pricing-image" class="pricing-image">
+             <img src="QQ_1746184257816.jpg" alt="Yearly Pricing Plans" id="yearly-pricing-image" class="pricing-image hidden">
+         </div>
     </div>
 
     <div id="use-cases1" class="section">
@@ -323,12 +388,49 @@ Let KyoConnectAI be your guide!Share your challenges and expectations with us, a
         <p>&copy; 2025 KyoConnectAI. All Rights Reserved.</p>
     </footer>
 
-<script>
+    <script>
         window.CHATBOT_API = 'https://kyoconnectai-hp-chatbot-1096582767898.europe-west1.run.app/chat';
     </script>
-<script src="https://kyokaen.github.io/kyoconnectai-chatbot-js/kyoconnectai-response-format-test.js" defer></script>
+    <script src="https://kyokaen.github.io/kyoconnectai-chatbot-js/kyoconnectai-response-format-test.js" defer></script>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const monthlyButton = document.querySelector('.toggle-button[data-target="monthly"]');
+            const yearlyButton = document.querySelector('.toggle-button[data-target="yearly"]');
+            const monthlyImage = document.getElementById('monthly-pricing-image');
+            const yearlyImage = document.getElementById('yearly-pricing-image');
 
+            // Function to switch pricing view
+            function switchPricing(view) {
+                if (view === 'monthly') {
+                    monthlyButton.classList.add('active');
+                    yearlyButton.classList.remove('active');
+                    monthlyImage.classList.remove('hidden');
+                    yearlyImage.classList.add('hidden');
+                } else if (view === 'yearly') {
+                    yearlyButton.classList.add('active');
+                    monthlyButton.classList.remove('active');
+                    yearlyImage.classList.remove('hidden');
+                    monthlyImage.classList.add('hidden');
+                }
+            }
+
+            // Add event listeners to the buttons
+            monthlyButton.addEventListener('click', function() {
+                switchPricing('monthly');
+            });
+
+            yearlyButton.addEventListener('click', function() {
+                switchPricing('yearly');
+            });
+
+            // Set initial state (monthly is active by default in the HTML)
+            // If you want yearly to be the default, add the 'active' class to the yearly button
+            // and the 'hidden' class to the monthly image in the HTML initially.
+             switchPricing('monthly'); // Ensure the correct image is shown on load
+
+        });
+    </script>
 
 </body>
 </html>
