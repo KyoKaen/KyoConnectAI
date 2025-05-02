@@ -56,24 +56,18 @@
             background-color: #f4f4f4;
             padding: 20px;
         }
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 600px;
-            margin-bottom: 30px;
-        }
+        /* Enlarge the Build Now button */
         .hero button {
             margin: 10px 0;
-            padding: 10px;
+            padding: 15px 30px; /* Increased padding for a larger button area */
+            font-size: 1.1rem; /* Slightly increased font size */
             border: 1px solid #ccc;
             border-radius: 5px;
             background-color: #000;
             color: #fff;
             border: none;
             cursor: pointer;
+            transition: background-color 0.3s ease;
         }
         .hero button:hover {
             background-color: #444;
@@ -148,7 +142,7 @@
         }
 
         #pricing .text {
-             flex: none; /* Prevent flex items from growing/shrinking based on flex: 1 */
+             flex: none; /* Prevent flex items from growing/shrinkin g based on flex: 1 */
              width: 100%; /* Allow text container to take full width up to max-width */
              /* Increased max-width for wider content */
              max-width: 1200px; /* Adjusted as requested */
@@ -239,7 +233,7 @@
             flex-direction: column; /* Stack text and image within each item */
             align-items: center; /* Center text and image horizontally within the item */
             width: 100%; /* Take full width of parent (up to max-width) */
-            max-width: 1200px; /* Set a max-width for each use case item - you can adjust this */
+            max-width: 1000px; /* Set a max-width for each use case item - you can adjust this */
             margin-bottom: 40px; /* Add space between individual use cases */
             padding: 20px; /* Add padding within each use case item */
             box-sizing: border-box;
@@ -248,6 +242,20 @@
             background-color: #fff; /* Optional: Add a background color */
             text-align: left; /* Align text to the left within the use case item */
         }
+
+        /* Corrected styles for the bold text in use case titles */
+        .use-case-item .text p strong {
+            /* Removed display and width properties */
+            margin-right: 5px; /* Keep or adjust space after the bold text */
+        }
+
+        /* Ensure correct spacing for paragraphs within use case text */
+         .use-case-item .text p {
+            padding-left: 0;
+            text-indent: 0;
+            margin-bottom: 10px; /* Add some space between paragraphs */
+        }
+
 
         /* Override default .section .text and .section .image styles for .use-case-item children */
         .use-case-item .text {
@@ -348,11 +356,10 @@
                 <iframe src="https://kyokaen.github.io/kyoconnectai-mock-usecase/camping-bel-air.html"></iframe>
             </div>
         </div>
-        
+
         <div class="use-case-item">
             <div class="text">
-                <p><strong>Case 0: Sustainable Hostel AI Agent for Q&A</strong></p>
-                <p>Jo&Joe demo: <a href="https://kyokaen.github.io/kyoconnectai-mock-usecase/joandjoe-german.html" target="_blank">Jo&Joe Hostel</a></p>
+                <p><strong>Case 2: Sustainable Hostel AI Agent for Q&A</strong></p> <p>Jo&Joe demo: <a href="https://kyokaen.github.io/kyoconnectai-mock-usecase/joandjoe-german.html" target="_blank">Jo&Joe Hostel</a></p>
             </div>
             <div class="image">
                 <iframe src="https://kyokaen.github.io/kyoconnectai-mock-usecase/joandjoe-german.html"></iframe>
@@ -361,8 +368,7 @@
 
         <div class="use-case-item">
             <div class="text">
-                <p><strong>Case 1: EMLyon Business School MBA AI chatbot Agent</strong></p>
-                <p>Visit the EMLyon Website: <a href="https://kyokaen.github.io/kyoconnectai-mock-usecase/emlyon-mbas-demo.html" target="_blank">EMLyon MBA program</a></p>
+                <p><strong>Case 3: EMLyon Business School MBA AI chatbot Agent</strong></p> <p>Visit the EMLyon Website: <a href="https://kyokaen.github.io/kyoconnectai-mock-usecase/emlyon-mbas-demo.html" target="_blank">EMLyon MBA program</a></p>
             </div>
             <div class="image">
                 <iframe src="https://kyokaen.github.io/kyoconnectai-mock-usecase/emlyon-mbas-demo.html"></iframe>
@@ -371,8 +377,7 @@
 
         <div class="use-case-item">
             <div class="text">
-                <p><strong>Case 2: Camping Esplanaadi</strong></p>
-                <p>Tamara, the owner of a small camping business called Camping Esplanaadi, used to spend hours responding to visitor inquiries through messages and phone calls, interrupting her daily work. With our AI chatbot solution, Tamara no longer needs to manage these repetitive tasks manually. The chatbot now handles all customer queries efficiently, allowing Tamara to focus on running her business. As she commented, "The chatbot works perfectly, and I finally feel relieved."</p>
+                <p><strong>Case 4: Camping Esplanaadi</strong></p> <p>Tamara, the owner of a small camping business called Camping Esplanaadi, used to spend hours responding to visitor inquiries through messages and phone calls, interrupting her daily work. With our AI chatbot solution, Tamara no longer needs to manage these repetitive tasks manually. The chatbot now handles all customer queries efficiently, allowing Tamara to focus on running her business. As she commented, "The chatbot works perfectly, and I finally feel relieved."</p>
                 <p>Visit the Camping Website: <a href="https://campingesplanaadi.blogspot.com/" target="_blank">Camping Esplanaadi</a></p>
             </div>
             <div class="image">
@@ -382,8 +387,7 @@
 
         <div class="use-case-item">
              <div class="text">
-                <p><strong>Case 3: Antineo aims to accompany customers in the preclinical development of novel anticancer agents.</strong></p>
-                <p>Visit the Antineo Website: <a href="https://kyokaen.github.io/kyoconnectai-mock-usecase/antineo.html" target="_blank">Antineo</a></p>
+                <p><strong>Case 5: Antineo aims to accompany customers in the preclinical development of novel anticancer agents.</strong></p> <p>Visit the Antineo Website: <a href="https://kyokaen.github.io/kyoconnectai-mock-usecase/antineo.html" target="_blank">Antineo</a></p>
             </div>
             <div class="image">
                 <iframe src="https://kyokaen.github.io/kyoconnectai-mock-usecase/antineo.html"></iframe>
