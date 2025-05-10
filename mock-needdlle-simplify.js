@@ -5,48 +5,46 @@ export function BotWidget({ collectionId, needle }) {
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState('');
   const searchApi = needle.search.bind(needle);
-  const chatApi   = needle.chatCompletion.bind(needle);
+  const chatApi = needle.chatCompletion.bind(needle);
 
-  const { mutate: runChat, data: chatData, isPending: chatting, error: chatError } =
-    useMutation(chatApi);
+  // Mutation to perform search
+  const {
+    mutate: runSearch,
+    isPending: searching,
+    error: searchError,
+  } = useMutation(searchApi, {
+    onSuccess: ({ results }) => {
+      const contexts = results.map((r) => r.text);
+      runChat({ collection_id: collectionId, query, contexts });
+    },
+  });
 
-  const { mutate: runSearch, isPending: searching, error: searchError } =
-    useMutation(searchApi, {
-      onSuccess: (searchResults) => {
-        // After getting search results, trigger chat completion
-        runChat({ collection_id: collectionId, text: query, search_results: searchResults });
-      },
-    });
+  // Mutation to perform chat completion
+  const {
+    mutate: runChat,
+    data: chatData,
+    isPending: chatting,
+    error: chatError,
+  } = useMutation(chatApi);
 
   const loading = searching || chatting;
-  const error   = searchError || chatError;
+  const error = searchError || chatError;
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setOpen(true);
     runSearch({ collection_id: collectionId, text: query });
   };
 
   return (
     <div className="bg-white font-sans tracking-tight text-black">
-      {/* Floating toggle button */}
+      {/* Toggle Button */}
       <button
         onClick={() => setOpen((prev) => !prev)}
         className="fixed bottom-5 right-5 flex h-14 w-14 items-center justify-center rounded-full bg-blue-600 text-white shadow-lg transition duration-150 hover:bg-blue-700"
-        aria-label={open ? 'Close chat widget' : 'Open chat widget'}
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-6 w-6"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          {open ? (
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-          ) : (
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M21 12c0 4.418-4.03 8-9 8a9.862 9.862 0 01-4.255-.867L3 21l1.867-4.745A9.862 9.862 0 013 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-          )}
+        {/* Insert your SVG icon here */}
+        <svg className="h-8 w-8" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2C6.48 2 2 6.48 ... z" />
         </svg>
       </button>
 
@@ -57,26 +55,45 @@ export function BotWidget({ collectionId, needle }) {
               type="text"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              placeholder="Ask me anything..."
-              className="w-full rounded border border-gray-300 p-2 text-sm"
+              placeholder="Ask a question..."
+              className="w-full border border-gray-300 rounded p-2"
             />
             <button
               type="submit"
-              className="mt-2 w-full rounded bg-blue-600 px-4 py-2 text-white hover:bg-blue-700"
+              className="mt-2 w-full rounded bg-blue-600 hover:bg-blue-700 text-white p-2"
             >
               Send
             </button>
           </form>
 
-          {loading && <p className="mt-4 text-sm">Loading…</p>}
+          {loading && <p className="mt-2 text-gray-500">Loading...</p>}
           {error && <p className="mt-2 text-red-500 text-xs">{error.message}</p>}
+
           {chatData && (
-            <div className="mt-4 w-full overflow-y-auto rounded-lg border border-gray-300 bg-white p-4 text-sm shadow-inner">
-              {chatData.response || JSON.stringify(chatData)}
+            <div className="mt-4 w-full overflow-y-auto rounded-lg border border-gray-300 bg-white p-6 shadow-lg">
+              <div className="prose max-w-none">
+                {chatData.choices?.[0]?.message?.content}
+              </div>
+              <p className="mt-2 flex items-center text-xs text-gray-400">
+                <span>Powered by</span>
+                <a
+                  href="https://kyoconnectai.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mx-1 font-semibold text-blue-500 hover:underline"
+                >
+                  KyoConnectAI
+                </a>
+                <img
+                  src="https://kyoconnectai.com/kyoconnectai_logo.jpg"
+                  alt="KyoConnectAI Logo"
+                  className="inline-block h-4"
+                />
+              </p>
             </div>
           )}
         </div>
       )}
     </div>
-);
+  );
 }
