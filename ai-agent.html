@@ -16,6 +16,72 @@
   }
  
 
+  /* Header Styles */
+  .app-header {
+  background-color: #000000; /* Black background for header */
+  color: #FFFFFF;
+  padding: 15px 40px; /* Adjust padding as needed */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky; /* Makes the header stick to the top when scrolling */
+  top: 0;
+  z-index: 1000; /* Ensures header is above other content */
+  border-bottom: 1px solid #1a1a1a; /* Subtle border at the bottom */
+  }
+ 
+
+  .app-header .logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  }
+ 
+
+  .app-header .logo a {
+  text-decoration: none;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  }
+ 
+
+  .app-header .logo-image {
+  height: 30px; /* Adjust logo size */
+  margin-right: 10px;
+  border-radius: 50%; /* If your logo is circular */
+  }
+ 
+
+  /* Navigation Links (optional, if you want to add later) */
+  .app-header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  }
+ 
+
+  .app-header nav ul li {
+  margin-left: 30px;
+  }
+ 
+
+  .app-header nav ul li a {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 1em;
+  transition: color 0.3s ease;
+  }
+ 
+
+  .app-header nav ul li a:hover {
+  color: #888888; /* Lighter grey on hover */
+  }
+ 
+
+  /* Main Section Styles */
   .section {
   min-height: 100vh; /* Make each section take at least the full viewport height */
   display: flex;
@@ -24,6 +90,7 @@
   align-items: center;
   padding: 50px 20px;
   text-align: center;
+  box-sizing: border-box; /* Include padding in element's total width and height */
   }
  
 
@@ -45,6 +112,61 @@
   height: auto;
   margin-top: 40px;
   border-radius: 8px; /* Slightly rounded corners for images */
+  }
+ 
+
+  /* Specific styles for the "Customer Experience AI Agent" section */
+  .customer-experience-section {
+  background-color: #000000; /* Dark background */
+  padding: 100px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  }
+ 
+
+  .customer-experience-section .tag {
+  background-color: #1a1a1a;
+  color: #FFFFFF;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  margin-bottom: 20px;
+  }
+ 
+
+  .customer-experience-section h2 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  }
+ 
+
+  .customer-experience-section p {
+  max-width: 700px;
+  margin-bottom: 40px;
+  }
+ 
+
+  .create-agent-button {
+  background-color: #000000; /* Black button */
+  color: #FFFFFF; /* White text */
+  border: 2px solid #FFFFFF; /* White border */
+  padding: 15px 30px;
+  font-size: 1.1em;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  }
+ 
+
+  .create-agent-button:hover {
+  background-color: #FFFFFF; /* White background on hover */
+  color: #000000; /* Black text on hover */
+  border-color: #000000; /* Black border on hover */
   }
  
 
@@ -127,23 +249,44 @@
  <body>
  
 
+  <header class="app-header">
+  <div class="logo">
+  <a href="https://kyoconnectai.com/index.html">
+  <img src="https://kyoconnectai.com/kyoconnectai_logo.jpg" alt="KyoConnectAI Logo" class="logo-image">
+  KyoConnectAI
+  </a>
+  </div>
+  <nav>
+  </nav>
+  </header>
+ 
+
   <div class="section" id="hero">
   <h1>KyoconnectAI <br> AI Agents</h1>
   <p>Discover how our intelligent agents redefine efficiency and innovation in your business operations. Our AI agents are designed to deliver human-level performance, automating complex tasks and streamlining workflows for unprecedented productivity.</p>
   <img src="https://framerusercontent.com/images/U2c9n79mByvy333aNAiGk33PbY.png" alt="KyoconnectAI AI Agents Overview">
+  <!-- </div> -->
+ 
+  <!-- <div class="customer-experience-section" id="customer-agent"> -->
+  <!-- <div class="tag">AI Agent</div> -->
+  <h2>Customer Experience AI Agent</h2>
+  <p>The Customer Experience AI Agent analyzes customer interaction data to improve personalized service and provides actionable feedback to help businesses refine their customer service strategies across industries like e-commerce, healthcare, and telecommunications.</p>
+  <a href="https://elp-new-venture-demo-freeze-june-1096582767898.europe-west1.run.app/dashboard/index.html" class="create-agent-button">Create agent</a>
   </div>
+ 
 
   <div class="section" id="efficiency">
-    <h2>Improve Operational Efficiency and Create Leverage. Fast.</h2>
-    <p>Deploy AI agents to streamline operations and amplify your business's efficiency. These agents optimize processes, reduce delays, and enhance output, ensuring you gain a competitive edge with speed and precision.</p>
-    <img src="https://framerusercontent.com/images/VXzCcZpZqqUa1PgeT9Foh0NRaM.png" alt="Operational Efficiency with AI">
-    </div>  
+  <h2>Improve Operational Efficiency and Create Leverage. Fast.</h2>
+  <p>Deploy AI agents to streamline operations and amplify your business's efficiency. These agents optimize processes, reduce delays, and enhance output, ensuring you gain a competitive edge with speed and precision.</p>
+  <img src="https://framerusercontent.com/images/VXzCcZpZqqUa1PgeT9Foh0NRaM.png" alt="Operational Efficiency with AI">
+  </div>
+ 
 
   <div class="section" id="performance">
   <h2>AI Agents: Workforce With Human-Level Performance</h2>
   <p>Our AI agents deliver precise, efficient task automation, matching human-level performance. They operate continuously, reducing security and increasing productivity, allowing businesses to scale fast without additional human resource costs.</p>
   <img src="https://framerusercontent.com/images/DynGgnR3sUE0M9x2dUUXrCkQw.png" alt="AI Agents Workforce Performance">
-  <img src="https://framerusercontent.com/images/kVJAIm8ReiBQUXERI2xgaTtKuug.png" alt="AI Agents Workforce Performance">
+  <img src="https://framerusercontent.com/images/kVJAIm8ReiBQUXERI2xgaTtKuug.png" alt="AI Agents Workforce Performance Detail">
   </div>
  
 
@@ -152,6 +295,7 @@
   <p>Our advanced multi-agent systems enable intelligent agents to collaborate seamlessly, tackling complex challenges and providing comprehensive solutions that go beyond individual capabilities. Experience true synergy in your operations.</p>
   <img src="https://framerusercontent.com/images/HLrlxEO3faF1ECcn4wRkcdoowSs.png" alt="Autonomous Agents Collaboration">
   </div>
+ 
 
   <div class="faq-section" id="faq">
   <h2>Frequently Asked Questions</h2>
@@ -194,6 +338,11 @@
   </div>
  
 
+  <footer class="footer-section">
+  <p>&copy; KyoConnectAI</p>
+  </footer>
+ 
+
   <script>
   document.addEventListener('DOMContentLoaded', function() {
   const faqItems = document.querySelectorAll('.faq-item');
@@ -209,7 +358,11 @@
   faqAnswers.forEach(answer => {
   if (answer.id !== targetId && answer.classList.contains('show')) {
   answer.classList.remove('show');
-  answer.previousElementSibling.querySelector('.toggle-icon').textContent = '+';
+  // Find the corresponding faq-item to update its toggle icon
+  const correspondingFaqItem = document.querySelector(`.faq-item[data-target="${answer.id}"]`);
+  if (correspondingFaqItem) {
+  correspondingFaqItem.querySelector('.toggle-icon').textContent = '+';
+  }
   }
   });
  
@@ -232,7 +385,11 @@
   closeIcon.addEventListener('click', function(event) {
   event.stopPropagation(); // Prevent the click from propagating to the parent faq-item
   answer.classList.remove('show');
-  answer.previousElementSibling.querySelector('.toggle-icon').textContent = '+';
+  // Find the corresponding faq-item to update its toggle icon
+  const correspondingFaqItem = document.querySelector(`.faq-item[data-target="${answer.id}"]`);
+  if (correspondingFaqItem) {
+  correspondingFaqItem.querySelector('.toggle-icon').textContent = '+';
+  }
   });
   }
   });
