@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="kyoconnectai_logo.jpg" type="image/jpeg"/>
+  <title>KyoconnectAI - AI Agents (Mock Page)</title>
+  <style>
+  body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #000000; /* Black background */
+  color: #FFFFFF; /* White text */
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  }
+ 
+
+  .section {
+  min-height: 100vh; /* Make each section take at least the full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  text-align: center;
+  }
+ 
+
+  .section h1, .section h2 {
+  color: #FFFFFF;
+  margin-bottom: 20px;
+  }
+ 
+
+  .section p {
+  max-width: 800px;
+  line-height: 1.6;
+  font-size: 1.1em;
+  }
+ 
+
+  .section img {
+  max-width: 90%;
+  height: auto;
+  margin-top: 40px;
+  border-radius: 8px; /* Slightly rounded corners for images */
+  }
+ 
+
+  /* Specific styles for the "Frequently Asked Questions" section */
+  .faq-section {
+  background-color: #000000;
+  color: #FFFFFF;
+  padding: 80px 20px;
+  text-align: center;
+  }
+ 
+
+  .faq-section h2 {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  }
+ 
+
+  .faq-item {
+  background-color: #1a1a1a; /* Darker background for FAQ items */
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 900px;
+  padding: 25px;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  }
+ 
+
+  .faq-item h3 {
+  margin: 0;
+  font-size: 1.3em;
+  }
+ 
+
+  .faq-item .toggle-icon {
+  font-size: 1.8em;
+  font-weight: bold;
+  }
+ 
+
+  .faq-answer {
+  background-color: #1a1a1a; /* Same background as item for continuity */
+  border-radius: 0 0 10px 10px; /* Rounded only at bottom */
+  margin: -15px auto 20px auto; /* Adjust margin to tuck under the question */
+  max-width: 900px;
+  padding: 20px 25px;
+  text-align: left;
+  display: none; /* Hidden by default */
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  }
+ 
+
+  .faq-answer.show {
+  display: block;
+  opacity: 1;
+  }
+ 
+
+  .faq-answer .close-icon {
+  float: right;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: #888; /* Slightly lighter color for the close icon */
+  }
+ 
+
+  .faq-answer p {
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-size: 1em;
+  color: #d0d0d0;
+  }
+  </style>
+ </head>
+ <body>
+ 
+
+  <div class="section" id="hero">
+  <h1>KyoconnectAI <br> AI Agents</h1>
+  <p>Discover how our intelligent agents redefine efficiency and innovation in your business operations. Our AI agents are designed to deliver human-level performance, automating complex tasks and streamlining workflows for unprecedented productivity.</p>
+  <img src="https://framerusercontent.com/images/U2c9n79mByvy333aNAiGk33PbY.png" alt="KyoconnectAI AI Agents Overview">
+  </div>
+
+  <div class="section" id="efficiency">
+    <h2>Improve Operational Efficiency and Create Leverage. Fast.</h2>
+    <p>Deploy AI agents to streamline operations and amplify your business's efficiency. These agents optimize processes, reduce delays, and enhance output, ensuring you gain a competitive edge with speed and precision.</p>
+    <img src="https://framerusercontent.com/images/VXzCcZpZqqUa1PgeT9Foh0NRaM.png" alt="Operational Efficiency with AI">
+    </div>  
+
+  <div class="section" id="performance">
+  <h2>AI Agents: Workforce With Human-Level Performance</h2>
+  <p>Our AI agents deliver precise, efficient task automation, matching human-level performance. They operate continuously, reducing security and increasing productivity, allowing businesses to scale fast without additional human resource costs.</p>
+  <img src="https://framerusercontent.com/images/DynGgnR3sUE0M9x2dUUXrCkQw.png" alt="AI Agents Workforce Performance">
+  <img src="https://framerusercontent.com/images/kVJAIm8ReiBQUXERI2xgaTtKuug.png" alt="AI Agents Workforce Performance">
+  </div>
+ 
+
+  <div class="section" id="collaboration">
+  <h2>Empowering Autonomous Agents to Work Together</h2>
+  <p>Our advanced multi-agent systems enable intelligent agents to collaborate seamlessly, tackling complex challenges and providing comprehensive solutions that go beyond individual capabilities. Experience true synergy in your operations.</p>
+  <img src="https://framerusercontent.com/images/HLrlxEO3faF1ECcn4wRkcdoowSs.png" alt="Autonomous Agents Collaboration">
+  </div>
+
+  <div class="faq-section" id="faq">
+  <h2>Frequently Asked Questions</h2>
+  <p>Learn the answers to common questions about our AI solutions, tools, and services, helping you understand how they can benefit your business and streamline operations.</p>
+  
+  <div class="faq-item" data-target="faq1">
+  <h3>What is agentic AI?</h3>
+  <span class="toggle-icon">+</span>
+  </div>
+  <div class="faq-answer" id="faq1">
+  <span class="close-icon">&times;</span>
+  <p>Agentic AI refers to self-learning AI systems that autonomously make decisions and execute tasks, adapting dynamically to changes in workflows.</p>
+  </div>
+ 
+
+  <div class="faq-item" data-target="faq2">
+  <h3>How can AI automation scale operations with intelligent agents?</h3>
+  <span class="toggle-icon">+</span>
+  </div>
+  <div class="faq-answer" id="faq2">
+  <span class="close-icon">&times;</span>
+  <p>AI automation transforms business processes by enabling agentic AI systems to autonomously manage workflows, optimize performance, and drive efficiency at scale. By leveraging self-learning AI, companies achieve seamless automation, eliminating repetitive tasks and accelerating decision-making. KyoConnectAI's AI agent platform ensures businesses stay ahead by integrating autonomous intelligence into their core operations.</p>
+  </div>
+ 
+
+  <div class="faq-item" data-target="faq3">
+  <h3>What are our AI tools and their benefits?</h3>
+  <span class="toggle-icon">+</span>
+  </div>
+  <div class="faq-answer" id="faq3">
+  <span class="close-icon">&times;</span>
+  <p>Not all AI agent platforms are the same. KyoConnectAI goes beyond traditional automation by leveraging fully autonomous, self-learning agents that dynamically adapt to evolving business needs. Unlike rule-based automation tools, our agentic AI systems continuously optimize workflows, making them smarter over time.</p>
+  <p>Companies using KyoConnectAI AI benefit from:</p>
+  <ol>
+  <li>Faster Process Automation — AI agents execute tasks with minimal human intervention.</li>
+  <li>Reduced Operational Costs — Automated workflows lower labor expenses and increase efficiency.</li>
+  <li>Scalable AI Workforce — Deploy multiple AI agents without the overhead of additional staff.</li>
+  </ol>
+  </div>
+  </div>
+ 
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+  const faqItems = document.querySelectorAll('.faq-item');
+  const faqAnswers = document.querySelectorAll('.faq-answer');
+ 
+
+  faqItems.forEach(item => {
+  item.addEventListener('click', function() {
+  const targetId = this.dataset.target;
+  const targetAnswer = document.getElementById(targetId);
+  
+  // Close all other open answers
+  faqAnswers.forEach(answer => {
+  if (answer.id !== targetId && answer.classList.contains('show')) {
+  answer.classList.remove('show');
+  answer.previousElementSibling.querySelector('.toggle-icon').textContent = '+';
+  }
+  });
+ 
+
+  // Toggle the clicked answer
+  targetAnswer.classList.toggle('show');
+  const toggleIcon = this.querySelector('.toggle-icon');
+  if (targetAnswer.classList.contains('show')) {
+  toggleIcon.textContent = '-';
+  } else {
+  toggleIcon.textContent = '+';
+  }
+  });
+  });
+ 
+
+  faqAnswers.forEach(answer => {
+  const closeIcon = answer.querySelector('.close-icon');
+  if (closeIcon) {
+  closeIcon.addEventListener('click', function(event) {
+  event.stopPropagation(); // Prevent the click from propagating to the parent faq-item
+  answer.classList.remove('show');
+  answer.previousElementSibling.querySelector('.toggle-icon').textContent = '+';
+  });
+  }
+  });
+  });
+  </script>
+ </body>
+ </html>
