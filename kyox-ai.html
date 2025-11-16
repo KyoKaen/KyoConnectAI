@@ -473,14 +473,11 @@
             background-color: var(--cta-hover);
         }
 
-        /* --- Footer --- */
-        .footer {
+        footer {
+            background-color: #000;
+            color: #fff;
             text-align: center;
-            padding: 40px 0;
-            background-color: var(--header-footer-bg);
-            color: #ffffff; /* Pure white text as requested */
-            margin-top: 60px;
-            font-size: 0.9rem;
+            padding: 10px 20px;
         }
 
         /* --- Mobile Responsiveness --- */
@@ -718,12 +715,10 @@
 
     </main>
 
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 kyox.ai. All rights reserved.</p>
-        </div>
+    <footer>
+        <p>&copy; 2025 kyox.ai. All Rights Reserved.</p>
     </footer>
-
+    
     <script>
         document.getElementById("contact-form").addEventListener("submit", function(event) {
             event.preventDefault();
@@ -740,5 +735,10 @@
         });
     </script>
 
+    <script>
+        window.CHATBOT_API = 'https://kyoconnectai-hp-chatbot-1096582767898.europe-west1.run.app/chat';
+    </script>
+    <script src="https://kyokaen.github.io/kyoconnectai-chatbot-js/kyoconnectai-response-format-test.js" defer></script>
+  
 </body>
 </html>
