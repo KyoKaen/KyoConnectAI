@@ -380,33 +380,6 @@
             display: block;
         }
 
-        /* Using grid for a 2-column layout on desktop for the detailed cases */
-        @media (min-width: 900px) {
-            .use-case-detailed {
-                display: grid;
-                grid-template-columns: 40% 60%;
-            }
-            .use-case-detailed .image {
-                border-top: none;
-                border-left: 1px solid var(--border-color);
-            }
-            /* Reverse layout for even items */
-            .use-case-detailed:nth-child(even) {
-                grid-template-columns: 60% 40%;
-            }
-            .use-case-detailed:nth-child(even) .text {
-                grid-column: 2;
-                grid-row: 1;
-            }
-            .use-case-detailed:nth-child(even) .image {
-                grid-column: 1;
-                grid-row: 1;
-                border-left: none;
-                border-right: 1px solid var(--border-color);
-            }
-        }
-
-
         /* --- Contact Section (Moved & Restyled) --- */
         #contact {
             background-color: var(--bg-color);
